@@ -25,7 +25,7 @@ public class Department {
         }
         else {
             employees.add(employee);
-            System.out.println("Employee ID" + employee.getId() + " added");
+            System.out.println("Employee ID " + employee.getId() + " added");
         }
     }
 
