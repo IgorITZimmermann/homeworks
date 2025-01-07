@@ -1,6 +1,7 @@
 package de.ait.homework27;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Department {
     private String name;
@@ -8,6 +9,10 @@ public class Department {
 
     public Department(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void addEmployee(Employee employee){
@@ -77,5 +82,17 @@ public class Department {
 
     public ArrayList<Employee> getEmployees(){
         return new ArrayList<>(employees);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Department that = (Department) o;
+        return Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
     }
 }
