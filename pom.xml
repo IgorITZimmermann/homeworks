@@ -15,6 +15,30 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+            <!-- SLF4J API is needed -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>2.0.9</version>
+            </dependency>
+
+            <!-- Add an SLF4J Binding for logging - e.g., Logback -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.4.11</version>
+            </dependency>
+
+
         <!-- JUnit Jupiter Engine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -52,6 +76,8 @@
             <!-- Ограничение зависимости только для тестов -->
             <!-- Dependency scope limited to tests -->
         </dependency>
+
+
     </dependencies>
 
 </project>
