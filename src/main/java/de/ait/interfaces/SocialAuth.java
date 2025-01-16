@@ -14,6 +14,7 @@ public interface SocialAuth {
     // Константа для максимального количества попыток входа
     int MAX_LOGIN_ATTEMPTS = 3;
 
+
     /**
      * Authenticates a user using their credentials.
      *
