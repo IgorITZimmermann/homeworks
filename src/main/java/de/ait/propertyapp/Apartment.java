@@ -1,5 +1,7 @@
 package de.ait.propertyapp;
 
+/* Класс, представляющий квартиру. */
+/* Class representing an apartment. */
 public class Apartment implements Property {
     private String address; // адрес
     private int floor; // этаж
@@ -14,6 +16,8 @@ public class Apartment implements Property {
     }
 
     @Override
+// Метод для расчета цены недвижимости.
+// Method for calculating the price of the property.
     public double calculatePrice() {
         int pricePerSquareMeter = 1000; // цена за квадратный метр
         double price = pricePerSquareMeter * area;
@@ -24,6 +28,8 @@ public class Apartment implements Property {
     }
 
     @Override
+// Метод для вывода деталей недвижимости.
+// Method for printing property details.
     public void printDetails() {
         System.out.println("Apartment:");
         System.out.println("Address: " + address);

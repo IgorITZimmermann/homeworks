@@ -1,5 +1,7 @@
 package de.ait.propertyapp;
 
+/* Класс, представляющий дом. */
+/* Class representing a house. */
 public class House implements Property {
 
     private String address;
@@ -31,6 +33,8 @@ public class House implements Property {
     }
 
     @Override
+// Метод для расчета цены недвижимости.
+// Method for calculating the price of the property.
     public double calculatePrice() {
         double basePriceHouse = 800;  // Цена за 1 квадратнай дома
         double basePriceLand = 200;   // Цена за 1 квадратный участка
@@ -42,6 +46,8 @@ public class House implements Property {
     }
 
     @Override
+// Метод для вывода деталей недвижимости.
+// Method for printing property details.
     public void printDetails() {
         System.out.println("Дом:");
         System.out.println("Адрес: " + address);
@@ -49,6 +55,7 @@ public class House implements Property {
         System.out.println("Площадь участка: " + landArea + " метр квадратный");
         System.out.println("Наличие гаража: " + (hasGarage ? "Да" : "Нет"));
         System.out.println("Цена: " + calculatePrice() + " евро");
+        System.out.println();
     }
 
 

@@ -3,6 +3,8 @@ package de.ait.propertyapp;
 import java.util.HashMap;
 import java.util.Map;
 
+/* Класс, представляющий коммерческую недвижимость. */
+/* Class representing a commercial property. */
 public class CommercialProperty implements Property {
 
     private String address;
@@ -20,6 +22,8 @@ public class CommercialProperty implements Property {
     }
 
     @Override
+// Метод для расчета цены недвижимости.
+// Method for calculating the price of the property.
     public double calculatePrice() {
         Map<String, Double> priceProperty = new HashMap<>();
         priceProperty.put(officeType, 1500.0);
@@ -48,6 +52,8 @@ public class CommercialProperty implements Property {
     }
 
     @Override
+// Метод для вывода деталей недвижимости.
+// Method for printing property details.
     public void printDetails() {
         switch (businessType) {
             case "office" -> {
@@ -62,6 +68,12 @@ public class CommercialProperty implements Property {
         }
         System.out.println("Address: " + address);
         System.out.println("Area: " + area + " square meters");
+        System.out.println(calculatePrice());
+        System.out.println();
     }
 
+    @Override
+    public String getAddress() {
+        return address;
+    }
 }
