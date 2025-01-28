@@ -1,4 +1,4 @@
-package de.ait.exceptionshandling;
+package de.ait.excepionshandling;
 
 public class BadError {
 
