@@ -50,9 +50,14 @@ public class HotelReservationSystem {
      * @throws NoActiveReservationException если бронирование не активно / if no active reservation exists
      */
     public void cancelReservation(int roomNumber) throws NoActiveReservationException {
+
+
         if (!roomsInfo.containsKey(roomNumber) || !roomsInfo.get(roomNumber)) {
             throw new NoActiveReservationException("No active reservation for room " + roomNumber);
         }
+
+
+
         roomsInfo.put(roomNumber, false);
         log.info("Room {} reservation cancelled", roomNumber);
     }

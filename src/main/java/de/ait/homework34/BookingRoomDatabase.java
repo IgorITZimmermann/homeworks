@@ -31,11 +31,13 @@ public class BookingRoomDatabase {
             log.error("Wrong room index: {}", roomIndex);
             throw new ArrayIndexOutOfBoundsException("Wrong room index: " + roomIndex);
         }
-        if(guestName == null || guestName.isEmpty()){
+        else if(guestName == null || guestName.isEmpty()){
             log.error("Guest name is empty or null");
             throw new IllegalArgumentException("Guest name is empty or null");
         }
-        guests[roomIndex] = guestName;
+        else {
+            guests[roomIndex] = guestName;
+        }
         log.info("Guest {} was added to room {}", guestName, rooms[roomIndex]);
     }
 
