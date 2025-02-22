@@ -1,6 +1,12 @@
 
 package de.ait.homework29;
 
+import lombok.EqualsAndHashCode;
+import lombok.Generated;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 /**
  * This class represents a post in the social media application.
  * A post has an author, content, and a number of likes.
@@ -8,10 +14,12 @@ package de.ait.homework29;
  * Этот класс представляет публикацию в социальной медиа-программе.
  * Публикация имеет автора, содержание и количество лайков.
  */
+@ToString @EqualsAndHashCode
 public class Post {
 
     // The author of the post
     // Автор публикации
+    @Getter @Setter
     private User author;
 
     // The content of the post

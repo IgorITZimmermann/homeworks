@@ -12,7 +12,7 @@ public class ByteStreamReader {
             FileInputStream fileInputStream = new FileInputStream(filePath); // Создаем FileInputStream для чтения файла / Create FileInputStream to read the file
             int data; // Переменная для хранения прочитанного байта / Variable to store the read byte
             while ((data = fileInputStream.read()) != -1){ // Чтение байта за байтом / Reading byte by byte
-                System.out.println( (char) data); // Вывод прочитанного байта как символа / Output the read byte as a character
+                System.out.print( (char) data); // Вывод прочитанного байта как символа / Output the read byte as a character
             }
             fileInputStream.close(); // Закрываем поток / Close the stream
         }
