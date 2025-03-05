@@ -1,8 +1,13 @@
 package de.ait.generics;
 
-// Интерфейс Container, определяющий методы для работы с контейнером
-// Container interface defining methods for working with a container
+// Интерфейс Container определяет методы для работы с контейнером.
+// T - это обобщенный тип, который может быть любым типом данных.
 public interface Container<T> {
-    void add(T item); // Метод для добавления элемента в контейнер / Method to add an item to the container
-    T get(int index); // Метод для получения элемента из контейнера по индексу / Method to get an item from the container by index
+    // Метод для добавления элемента в контейнер.
+    // Принимает элемент типа T и добавляет его в контейнер.
+    void add(T item);
+
+    // Метод для получения элемента из контейнера по индексу.
+    // Принимает индекс элемента и возвращает элемент типа T.
+    T get(int index);
 }
